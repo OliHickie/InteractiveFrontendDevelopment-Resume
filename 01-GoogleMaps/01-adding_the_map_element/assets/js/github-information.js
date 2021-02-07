@@ -35,6 +35,8 @@ function repoInformationHTML(repos) {
 }
 
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html(""); // When function called sets to an empty string
+    $("#gh-repo-data").html("");
 
     var username = $("#gh-username").val();
 
@@ -66,3 +68,5 @@ function fetchGitHubInformation(event) {
             }
         })
 }
+
+$(document).ready(fetchGitHubInformation); // When page is ready, fetch fct is called.
